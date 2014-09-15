@@ -1,0 +1,53 @@
+echo 'linking dotfiles...'
+
+## zshrc
+file="$HOME/.zshrc"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/.zshrc $HOME/.zshrc
+fi
+
+## aliases
+file="$HOME/.alias.sh"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/.alias.sh $HOME/.alias.sh
+fi
+
+## environment stuff
+file="$HOME/.env.sh"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/.env.sh $HOME/.env.sh
+fi
+
+## functions
+file="$HOME/.functions.sh"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/.functions.sh $HOME/.functions.sh
+fi
+
+## theme
+file="$HOME/.oh-my-zsh/custom/ges.zsh-theme"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/oh-my-zsh/ges.zsh-theme $HOME/.oh-my-zsh/custom/ges.zsh-theme
+fi
+
+echo 'done!'
