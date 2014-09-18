@@ -1,7 +1,7 @@
 
 alias m="mate ."
 alias gst="git status -sb"
-alias ss="script/start"
+alias ss="../../script/start_alternative"
 
 alias brake="bundle exec rake"
 alias be="bundle exec"
