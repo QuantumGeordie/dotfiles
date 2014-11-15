@@ -1,8 +1,10 @@
 
 alias m="mate ."
 alias gst="git status -sb"
-alias ss="../../script/start_alternative"
+alias gcob='git checkout -b'
+alias ss="script/start"
 
+alias rake='noglob rake'
 alias brake="bundle exec rake"
 alias be="bundle exec"
 alias migrate="bundle exec rake db:migrate ; bundle exec rake db:migrate RAILS_ENV=test"
