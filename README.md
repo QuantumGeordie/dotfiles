@@ -18,3 +18,5 @@ the private file should be handled manually if you want to do that.
 * `cp ~/src/dotfiles/.private.sh.template ~/src/dotfiles/.private.sh`
 * fill in the private info that should be kept private (.gitignore will not allow .private.sh to be included in repo)
 * `ln -s ~/src/dotfiles/.private.sh ~/.private.sh`
+
+how's that?
