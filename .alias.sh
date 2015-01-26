@@ -2,6 +2,8 @@
 alias m="mate ."
 alias gst="git status -sb"
 alias gcob='git checkout -b'
+alias gcom='git checkout master'
+
 alias ss="script/start"
 
 alias rake='noglob rake'
@@ -25,3 +27,6 @@ alias ip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2"
 alias r="rake"
 alias rts="rake test:selenium"
 alias rtu="rake test:units"
+
+alias b="bundle"
+alias bl="bundle --local"
