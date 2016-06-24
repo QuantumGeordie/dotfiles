@@ -1,4 +1,4 @@
-export NODE_PATH=/usr/local/lib/node_modules
+# export NODE_PATH=/usr/local/lib/node_modules
 
 export NGINX_VERSION="/usr/local/nginx/sbin/nginx"
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/local/adt/sdk/platform-tools:$PATH

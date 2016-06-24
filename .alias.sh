@@ -4,6 +4,7 @@ alias gcob='git checkout -b'
 alias gcom='git checkout master'
 
 alias ss="script/start"
+alias stop="script/stop"
 
 alias rake='noglob rake'
 alias brake="bundle exec rake"
@@ -28,6 +29,7 @@ alias ip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2"
 alias r="rake"
 alias rts="rake test:selenium"
 alias rtu="rake test:units"
+alias rtc="rake test:controllers"
 alias rta="rake test:appearance"
 alias rtas="rake test:appearance BROWSER_SIZE=small TAG=small"
 alias rtam="rake test:appearance BROWSER_SIZE=medium TAG=medium"
