@@ -5,6 +5,7 @@ alias gcom='git checkout master'
 
 alias ss="script/start"
 alias stop="script/stop"
+alias start="script/start"
 
 alias rake='noglob rake'
 alias brake="bundle exec rake"
