@@ -42,4 +42,7 @@ source $HOME/.env.sh
 source $HOME/.private.sh
 source $HOME/.functions.sh
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin:~/Library/Python/2.7/bin
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"

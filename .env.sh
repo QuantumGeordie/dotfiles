@@ -13,3 +13,6 @@ export RUBY_GC_MALLOC_LIMIT=300000000
 export JAVA_HOME=`/usr/libexec/java_home`
 export ANDROID_HOME="/usr/local/adt/sdk"
 export EDITOR='subl -w'
+
+export INEO_HOME=/Users/geordie/.ineo;
+export PATH=$INEO_HOME/bin:$PATH

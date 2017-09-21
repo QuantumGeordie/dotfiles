@@ -40,4 +40,6 @@ alias rtal="rake test:appearance BROWSER_SIZE=large TAG=large RUBY_DEP_GEM_SILEN
 alias b="bundle"
 alias bl="bundle --local"
 
-alias cat="ccat"
+alias t="test_launcher"
+
+alias an="annotate --exclude tests"
