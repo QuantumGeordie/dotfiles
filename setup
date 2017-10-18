@@ -50,4 +50,14 @@ else
   ln -s $(pwd)/oh-my-zsh/ges.zsh-theme $HOME/.oh-my-zsh/custom/ges.zsh-theme
 fi
 
+## karabiner - keyboard mapping
+file="$HOME/.config/karabiner/karabiner.json"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/karabiner.json $HOME/.config/karabiner/karabiner.json
+fi
+
 echo 'done!'
