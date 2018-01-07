@@ -3,9 +3,15 @@ alias gst="git status -sb"
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
 
-alias ss="script/start"
+if [ "$TERM_PROGRAM" = "iTerm.app" ]
+then
+  alias ss='command -v script/istart && script/istart || script/start'
+else 
+  alias ss='script/start'
+fi
+
 alias stop="script/stop"
-alias start="script/start"
+alias start="ss"
 
 alias rake='noglob rake'
 alias brake="bundle exec rake"
@@ -42,4 +48,4 @@ alias bl="bundle --local"
 
 alias t="test_launcher"
 
-alias an="annotate --exclude tests"
+alias an="bundle exec annotate --exclude tests"
