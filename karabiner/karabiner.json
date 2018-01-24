@@ -136,6 +136,30 @@
                     {
                         "manipulators": [
                             {
+                                "description": "left_shift+spacebar to delete_forward",
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_shift"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_forward"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
                                 "description": "s to shift when with left_control",
                                 "from": {
                                     "key_code": "s",
