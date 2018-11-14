@@ -27,3 +27,16 @@ fk () {
   done
   unset IFS
 }
+
+function bundle() {
+  command bundle "$@"
+
+  if [ $? == 0 ] && [ -z $DISABLE_BUNDLE_SYMLINK ] && ([ "$1" == "install" ] || [ "$#" -eq 0 ]); then
+    rootdir=$(bundle exec 'echo $BUNDLE_GEMFILE')
+    gemdir="$(dirname $rootdir)/.bundle/gems"
+    rm -rf $gemdir
+    mkdir -p $gemdir
+    echo "Symlinking bundle into $gemdir"
+    bundle show --paths | grep -v `pwd` | xargs -L 1 -I {} ln -s {} $gemdir
+  fi
+}
