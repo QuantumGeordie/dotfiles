@@ -16,6 +16,31 @@
                     {
                         "manipulators": [
                             {
+                                "description": "left_control+u to underscore",
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "hyphen",
+                                        "modifiers": ["left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "manipulators": [
+                            {
                                 "description": "left_control+h to left_arrow",
                                 "from": {
                                     "key_code": "h",
