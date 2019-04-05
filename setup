@@ -51,13 +51,33 @@ else
 fi
 
 ## karabiner - keyboard mapping
-file="$HOME/.config/karabiner/karabiner"
+file="$HOME/.config/karabiner/karabiner.json"
 if [ -e "$file" ]
 then
   echo "  $file already linked"
 else
   echo "  linking $file"
   ln -s $(pwd)/karabiner $HOME/.config/karabiner
+fi
+
+## VSCode - keybindings
+file="$HOME/Library/Application Support/Code/User/keybindings.json"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
+fi
+
+## VSCode - settings
+file="$HOME/Library/Application Support/Code/User/settings.json"
+if [ -e "$file" ]
+then
+  echo "  $file already linked"
+else
+  echo "  linking $file"
+  ln -s $(pwd)/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 fi
 
 echo 'done!'

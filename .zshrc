@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 
 ZSH_THEME="ges"
+# ZSH_THEME="spaceship"
 export TERM="xterm-256color"
 # ZSH_THEME="powerlevel9k/powerlevel9k"
 

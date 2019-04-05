@@ -1,0 +1,38 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "shift+cmd+r",
+        "command": "terminalCommandKeys.run",
+        "args": {
+            "cmd": "test_launcher ${file}:${line}",
+        }
+    },
+    {
+        "key": "alt+cmd+r",
+        "command": "terminalCommandKeys.run",
+        "args": {
+            "cmd": "test_launcher ${file}",
+        }
+    },
+    {
+        "key": "cmd+r",
+        "command": "terminalCommandKeys.run",
+        "args": {
+            "cmd": "test_launcher --rerun",
+        }
+    },
+    {
+        "key": "cmd+t",
+        "command": "-extension.searchCTags",
+        "when": "editorTextFocus"
+    },
+       {
+        "key": "cmd+t",
+        "command": "workbench.action.quickOpenPreviousEditor"
+    },
+    {
+        "key": "cmd+i",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+]

@@ -1,0 +1,27 @@
+{
+    "window.title": "${activeEditorLong}",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.currentLine.enabled": false,
+      "gitlens.codeLens.scopes": [
+        "document"
+      ],
+      "ruby.intellisense": "rubyLocate",
+      "ruby.locate": {
+        "exclude": "{.git,**/*_spec.rb,.history/**/*.rb}",
+        "include": "{**/*.rb,.bundle/**/*.rb}"
+      },
+      "editor.trimAutoWhitespace": true,
+      "files.autoSave": "onFocusChange",
+      "files.insertFinalNewline": true,
+      "files.trimTrailingWhitespace": true,
+      "editor.tabSize": 2,
+      "emmet.triggerExpansionOnTab": true,
+      "editor.fontSize": 16,
+      "editor.fontFamily": "'Fira Code'",
+      "editor.fontLigatures": true,
+      "terminal.integrated.fontFamily": "monospace",
+      "diffEditor.ignoreTrimWhitespace": false,
+      "workbench.colorTheme": "Solarized Dark",
+}
