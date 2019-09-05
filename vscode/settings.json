@@ -24,4 +24,5 @@
       "terminal.integrated.fontFamily": "monospace",
       "diffEditor.ignoreTrimWhitespace": false,
       "workbench.colorTheme": "Solarized Dark",
+      "workbench.sideBar.location": "left",
 }
