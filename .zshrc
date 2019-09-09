@@ -47,5 +47,5 @@ source $HOME/.functions.sh
 
 export PATH=$PATH:$HOME/.rvm/bin:~/Library/Python/2.7/bin
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+# export NVM_DIR="$HOME/.nvm"
+# . "/usr/local/opt/nvm/nvm.sh"
