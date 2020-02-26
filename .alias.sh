@@ -16,7 +16,7 @@ alias start="ss"
 alias rake='noglob rake'
 alias brake="bundle exec rake"
 alias be="bundle exec"
-alias migrate="bundle exec rake db:migrate ; bundle exec rake db:migrate RAILS_ENV=test"
+alias migrate="rake db:migrate  RAILS_ENV=test; rake db:migrate"
 alias m="migrate"
 alias emigrate="bundle exec rake app:db:migrate ; bundle exec rake app:db:migrate RAILS_ENV=test"
 alias solr="bundle exec rake solr:create_core ; bundle exec rake solr:create_core  RAILS_ENV=test"
@@ -26,6 +26,7 @@ alias gl="git --no-pager log --graph -n 20 --all --format=format:'%C(bold blue)%
 alias gsha="git log -n1 | head -n1 |  grep -Eo '[a-f0-9]{40}'"
 alias guc="git reset --soft 'HEAD^'"
 alias gprom="git pull --rebase origin master"
+alias gb="git --no-pager branch"
 
 alias changes='git log --pretty=format: --name-only --since="last year" | sort | uniq -c | sort -rg | grep -v Gemfile | grep -v "config/" | grep -v ".gemspec" |  head -50'
 
@@ -48,4 +49,19 @@ alias bl="bundle --local"
 
 alias t="test_launcher"
 
-alias an="bundle exec annotate --exclude tests"
+alias an="annotate --exclude tests"
+
+alias yi="yarn install"
+alias ys="yarn serve"
+alias yst="yarn serve --mode e2e --port 8081"
+alias yf="yarn format"
+alias yt="yarn test"
+alias yl="yarn lint"
+
+alias rs="rails s"
+alias rst="rails s -p 3030 -e test -P ../other.pid"
+
+alias sp="spotify"
+alias spp="spotify pause"
+alias splay="spotify play"
+alias sps="spotify status"

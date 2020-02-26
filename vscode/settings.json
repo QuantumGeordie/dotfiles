@@ -18,6 +18,11 @@
       "files.trimTrailingWhitespace": true,
       "editor.tabSize": 2,
       "emmet.triggerExpansionOnTab": true,
+      "emmet.showSuggestionsAsSnippets": true,
+      "emmet.includeLanguages": {
+          "*.erb": "html",
+          "ruby": "html"
+      },
       "editor.fontSize": 16,
       "editor.fontFamily": "'Fira Code'",
       "editor.fontLigatures": true,
