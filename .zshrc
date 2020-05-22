@@ -49,3 +49,4 @@ export PATH=$PATH:$HOME/.rvm/bin:~/Library/Python/2.7/bin
 
 # export NVM_DIR="$HOME/.nvm"
 # . "/usr/local/opt/nvm/nvm.sh"
+export PATH="/usr/local/opt/postgresql/bin:$PATH"
