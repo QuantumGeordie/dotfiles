@@ -2,6 +2,8 @@
 alias gst="git status -sb"
 alias gcob='git checkout -b'
 alias gcom='git checkout master'
+alias gfo='git fetch origin'
+alias gcl='gcom;g pull;g gone;clear'
 
 if [ "$TERM_PROGRAM" = "iTerm.app" ]
 then
@@ -27,6 +29,8 @@ alias gsha="git log -n1 | head -n1 |  grep -Eo '[a-f0-9]{40}'"
 alias guc="git reset --soft 'HEAD^'"
 alias gprom="git pull --rebase origin master"
 alias gb="git --no-pager branch"
+alias gpl="gh pr list"
+alias gprc="gh pr checkout"
 
 alias changes='git log --pretty=format: --name-only --since="last year" | sort | uniq -c | sort -rg | grep -v Gemfile | grep -v "config/" | grep -v ".gemspec" |  head -50'
 
@@ -53,10 +57,12 @@ alias an="annotate --exclude tests"
 
 alias yi="yarn install"
 alias ys="yarn serve"
-alias yst="yarn serve --mode e2e --port 8081"
+# alias yst="yarn serve --mode e2e --port 8081"
+alias yst="yarn cy:serve"
 alias yf="yarn format"
 alias yt="yarn test"
 alias yl="yarn lint"
+alias ylf="yarn lint --fix"
 
 alias rs="rails s"
 alias rst="rails s -p 3030 -e test -P ../other.pid"
@@ -65,3 +71,7 @@ alias sp="spotify"
 alias spp="spotify pause"
 alias splay="spotify play"
 alias sps="spotify status"
+
+alias rubo="bundle exec rubocop --format offenses --format worst"
+
+alias hyp="cd ~/src/hyperswitch"

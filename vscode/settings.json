@@ -1,9 +1,7 @@
 {
     "window.title": "${activeEditorLong}",
     "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.currentLine.enabled": false,
       "gitlens.codeLens.scopes": [
         "document"
       ],
@@ -11,6 +9,13 @@
       "ruby.locate": {
         "exclude": "{.git,**/*_spec.rb,.history/**/*.rb}",
         "include": "{**/*.rb,.bundle/**/*.rb}"
+      },
+      "ruby.useBundler": true,
+      "ruby.format": "rubocop",
+      "ruby.lint": {
+        "rubocop": {
+          "useBundler": true
+        }
       },
       "editor.trimAutoWhitespace": true,
       "files.autoSave": "onFocusChange",
@@ -28,7 +33,23 @@
       "editor.fontLigatures": true,
       "terminal.integrated.fontFamily": "monospace",
       "diffEditor.ignoreTrimWhitespace": false,
-      "workbench.colorTheme": "Solarized Dark",
+      "workbench.colorTheme": "Solarized Light",
       "workbench.sideBar.location": "left",
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "gitlens.advanced.fileHistoryFollowsRenames": true,
+      "vetur.format.defaultFormatterOptions": {
+
+        "js-beautify-html": {
+          "wrap_attributes": "force-expand-multiline"
+        },
+        "prettyhtml": {
+          "printWidth": 100,
+          "singleQuote": false,
+          "wrapAttributes": false,
+          "sortAttributes": false
+        }
+      },
+      "workbench.editor.enablePreview": false,
+      "gitlens.currentLine.enabled": false,
+      "gitlens.hovers.currentLine.over": "line"
 }

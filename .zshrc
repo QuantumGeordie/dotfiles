@@ -36,7 +36,7 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git svn sublime rvm)
+plugins=(git svn sublime rvm nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,6 +47,10 @@ source $HOME/.functions.sh
 
 export PATH=$PATH:$HOME/.rvm/bin:~/Library/Python/2.7/bin
 
-# export NVM_DIR="$HOME/.nvm"
-# . "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 export PATH="/usr/local/opt/postgresql/bin:$PATH"
+
+eval "$(direnv hook zsh)"
