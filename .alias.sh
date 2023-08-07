@@ -1,7 +1,7 @@
 
 alias gst="git status -sb"
 alias gcob='git checkout -b'
-alias gcom='git checkout master'
+alias gcom='git checkout main'
 alias gfo='git fetch origin'
 alias gcl='gcom;g pull;g gone;clear'
 
@@ -27,7 +27,7 @@ alias glog="git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C
 alias gl="git --no-pager log --graph -n 20 --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold red)— %an%C(reset)%C(bold magenta)%d%C(reset)' --abbrev-commit --date=relative"
 alias gsha="git log -n1 | head -n1 |  grep -Eo '[a-f0-9]{40}'"
 alias guc="git reset --soft 'HEAD^'"
-alias gprom="git pull --rebase origin master"
+alias gprom="git pull --rebase origin main"
 alias gb="git --no-pager branch"
 alias gpl="gh pr list"
 alias gprc="gh pr checkout"
@@ -73,5 +73,6 @@ alias splay="spotify play"
 alias sps="spotify status"
 
 alias rubo="bundle exec rubocop --format offenses --format worst"
+alias rubom="git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | xargs rubocop"
 
 alias hyp="cd ~/src/hyperswitch"
