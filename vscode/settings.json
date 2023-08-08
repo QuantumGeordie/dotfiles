@@ -34,7 +34,6 @@
       "terminal.integrated.fontFamily": "monospace",
       "diffEditor.ignoreTrimWhitespace": false,
       "workbench.colorTheme": "Solarized Light",
-      "workbench.sideBar.location": "left",
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "gitlens.advanced.fileHistoryFollowsRenames": true,
       "vetur.format.defaultFormatterOptions": {

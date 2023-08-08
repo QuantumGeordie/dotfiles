@@ -46,11 +46,13 @@ source $HOME/.private.sh
 source $HOME/.functions.sh
 
 export PATH=$PATH:$HOME/.rvm/bin:~/Library/Python/2.7/bin
-
+br
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-export PATH="/usr/local/opt/postgresql/bin:$PATH"
+export PATH="/usr/local/opt/postgresql/bin:/opt/homebrew/opt/libpq/bin:$PATH"
 
 eval "$(direnv hook zsh)"
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
