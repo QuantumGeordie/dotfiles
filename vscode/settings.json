@@ -1,54 +1,53 @@
 {
-    "window.title": "${activeEditorLong}",
-    "gitlens.advanced.messages": {
+  "window.title": "${activeEditorLong}",
+  "gitlens.advanced.messages": {},
+  "gitlens.codeLens.scopes": ["document"],
+  "ruby.intellisense": "rubyLocate",
+  "ruby.locate": {
+    "exclude": "{.git,**/*_spec.rb,.history/**/*.rb}",
+    "include": "{**/*.rb,.bundle/**/*.rb}",
+  },
+  "ruby.useBundler": true,
+  "ruby.format": "rubocop",
+  "ruby.lint": {
+    "rubocop": {
+      "useBundler": true,
     },
-      "gitlens.codeLens.scopes": [
-        "document"
-      ],
-      "ruby.intellisense": "rubyLocate",
-      "ruby.locate": {
-        "exclude": "{.git,**/*_spec.rb,.history/**/*.rb}",
-        "include": "{**/*.rb,.bundle/**/*.rb}"
-      },
-      "ruby.useBundler": true,
-      "ruby.format": "rubocop",
-      "ruby.lint": {
-        "rubocop": {
-          "useBundler": true
-        }
-      },
-      "editor.trimAutoWhitespace": true,
-      "files.autoSave": "onFocusChange",
-      "files.insertFinalNewline": true,
-      "files.trimTrailingWhitespace": true,
-      "editor.tabSize": 2,
-      "emmet.triggerExpansionOnTab": true,
-      "emmet.showSuggestionsAsSnippets": true,
-      "emmet.includeLanguages": {
-          "*.erb": "html",
-          "ruby": "html"
-      },
-      "editor.fontSize": 16,
-      "editor.fontFamily": "'Fira Code'",
-      "editor.fontLigatures": true,
-      "terminal.integrated.fontFamily": "monospace",
-      "diffEditor.ignoreTrimWhitespace": false,
-      "workbench.colorTheme": "Solarized Light",
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "gitlens.advanced.fileHistoryFollowsRenames": true,
-      "vetur.format.defaultFormatterOptions": {
-
-        "js-beautify-html": {
-          "wrap_attributes": "force-expand-multiline"
-        },
-        "prettyhtml": {
-          "printWidth": 100,
-          "singleQuote": false,
-          "wrapAttributes": false,
-          "sortAttributes": false
-        }
-      },
-      "workbench.editor.enablePreview": false,
-      "gitlens.currentLine.enabled": false,
-      "gitlens.hovers.currentLine.over": "line"
+  },
+  "editor.trimAutoWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.tabSize": 2,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.includeLanguages": {
+    "*.erb": "html",
+    "ruby": "html",
+  },
+  "editor.fontSize": 16,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "monospace",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.colorTheme": "Solarized Light",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "gitlens.advanced.fileHistoryFollowsRenames": true,
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force-expand-multiline",
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false,
+    },
+  },
+  "workbench.editor.enablePreview": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "claudeCode.preferredLocation": "panel",
 }

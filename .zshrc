@@ -56,3 +56,7 @@ export PATH="/usr/local/opt/postgresql/bin:/opt/homebrew/opt/libpq/bin:$PATH"
 eval "$(direnv hook zsh)"
 
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+autoload -U add-zsh-hook
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc

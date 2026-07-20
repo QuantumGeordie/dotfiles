@@ -28,15 +28,48 @@ fk () {
   unset IFS
 }
 
-function bundle() {
+bundle() {
+  # Call the real Bundler with all arguments properly expanded
   command bundle "$@"
 
-  if [ $? == 0 ] && [ -z $DISABLE_BUNDLE_SYMLINK ] && ([ "$1" == "install" ] || [ "$#" -eq 0 ]); then
+  # Only run extra logic if:
+  # 1) Bundler succeeded
+  # 2) DISABLE_BUNDLE_SYMLINK is not set
+  # 3) The first argument is "install" or no arguments were passed
+  if [[ $? -eq 0 && -z "$DISABLE_BUNDLE_SYMLINK" && ( "$1" = "install" || $# -eq 0 ) ]]; then
+    # Determine the root directory of the Gemfile
     rootdir=$(bundle exec 'echo $BUNDLE_GEMFILE')
-    gemdir="$(dirname $rootdir)/.bundle/gems"
-    rm -rf $gemdir
-    mkdir -p $gemdir
+    gemdir="$(dirname "$rootdir")/.bundle/gems"
+
+    # Clear and recreate the gems directory
+    rm -rf "$gemdir"
+    mkdir -p "$gemdir"
+
     echo "Symlinking bundle into $gemdir"
-    bundle show --paths | grep -v `pwd` | xargs -L 1 -I {} ln -s {} $gemdir
+
+    # Symlink all gems from Bundler into this directory, excluding common VCS and temp dirs
+    bundle show --paths \
+      | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox} -v "$(pwd)" \
+      | xargs -L 1 -I {} ln -s "{}" "$gemdir"
   fi
 }
+
+load-nvmrc() {
+  local nvmrc_path
+  nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version
+    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
+      nvm use
+    fi
+  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
+    nvm use default
+  fi
+}
+
+
